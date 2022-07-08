@@ -1,3 +1,13 @@
+OS_category=(
+    ('MacOS','MacOS'),
+    ('Windows','Windows'),
+)
+
+program_category=(
+    ('HWP','HWP'),
+    ('Word','Word'),
+)
+
 
 category_item =(
     ('Feaquently_Used_Key','Feaquently_Used_Key'),
