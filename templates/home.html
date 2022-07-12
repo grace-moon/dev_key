@@ -1,90 +1,56 @@
 {% load static %}
 
-<!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>UI keyboard | By Code Info</title>
-    <link rel="stylesheet" href="{% static 'keysite/style.css' %}">
-    <!-- Font Awesome Cdn Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
-  </head>
-  <body>
-    <div class="keyboard">
-      <div class="row one">
-          <button id="~">`</button>
-          <button id="q">1</button>
-          <button id="w">2</button>
-          <button id="e">3</button>
-          <button id="r">4</button>
-          <button id="t">5</button>
-          <button id="y">6</button>
-          <button id="u">7</button>
-          <button id="i">8</button>
-          <button id="o">9</button>
-          <button id="p">0</button>
-          <button id="minus">-</button>
-          <button id="equal">=</button>
-          <button class="oneBtn"><i class="fa-solid fa-delete-left"></i></button>
-      </div>
-      <div class="row two">
-          <button class="oneBtn" id="tab"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
-          <button id="q">Q</button>
-          <button id="w">W</button>
-          <button id="e">E</button>
-          <button id="r">R</button>
-          <button id="t">T</button>
-          <button id="y">Y</button>
-          <button id="u">U</button>
-          <button id="i">I</button>
-          <button id="o">O</button>
-          <button id="p">P</button>
-          <button id="minus">[</button>
-          <button id="equal">]</button>
-          <button id="backSlash">|</button>
-      </div>
-      <div class="row three">
-          <button class="twoBtn">Caps Lock</button>
-          <button id="a">A</button>
-          <button id="s">S</button>
-          <button id="d">D</button>
-          <button id="f">F</button>
-          <button id="g">G</button>
-          <button id="h">H</button>
-          <button id="j">J</button>
-          <button id="k">K</button>
-          <button id="l">L</button>
-          <button id="sq">;</button>
-          <button id="sqm">'</button>
-          <button class="threeBtn">Enter</button>
-      </div>
-      <div class="row four">
-          <button class="fiveBtn">Shift</button>
-          <button id="z">Z</button>
-          <button id="z">X</button>
-          <button id="z">C</button>
-          <button id="z">V</button>
-          <button id="z">B</button>
-          <button id="z">N</button>
-          <button id="z">M</button>
-          <button id="comma">,</button>
-          <button id="fs">.</button>
-          <button id="slash">/</button>
-          <button class="fiveBtn">Shift</button>
-      </div>
-      <div class="row five">
-          <button class="fourBtn" id="ctrl_L">fn</button>
-          <button>Ctrl</button>
-          <button><i class="bi bi-option"></i></button>
-          <button><i class="bi bi-command"></i></button>
-          <button class="space">Space</button>
-          <button><i class="bi bi-command"></i></button>
-          <button><i class="bi bi-option"></i></button>
-          <button><i class="fa-solid fa-print"></i></button>
-          <button class="fourBtn" id="ctrl_R">ctrl</button>
-      </div>
-    </div>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML DOM - Create resizable split views</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/demo.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap"/>
+        <script src="{% static 'keysite/script.js' %}"></script>
+        <style>
+            .container {
+                display: flex;
+
+                /* Misc */
+                border: 1px solid #cbd5e0;
+                height: 16rem;
+                width: 100%;
+            }
+            .container__left {
+                /* Initially, the left takes 3/4 width */
+                width: 75%;
+
+                /* Misc */
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+            .resizer {
+                background-color: #cbd5e0;
+                cursor: ew-resize;
+                height: 100%;
+                width: 2px;
+            }
+            .container__right {
+                /* Take the remaining width */
+                flex: 1;
+
+                /* Misc */
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="container__left">Left</div>
+            <div class="resizer" id="dragMe" style="width: 10px"></div>
+            <div class="container__right">Right</div>
+        </div>
+
+
+    </body>
 </html>
