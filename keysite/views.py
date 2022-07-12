@@ -19,3 +19,4 @@ def MacOS_HWP_key_list(request):
 def MacOS_Word_key_list(request):
     cmd_list = Cmd.objects.all()
     return render(request, '../templates/MacOS_Word_key_list.html',{'cmd_list':cmd_list})
+
