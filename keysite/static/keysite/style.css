@@ -80,7 +80,7 @@ button{
       rgb(230,233,235) 95%,
       rgb(191,191,191) 100%
   );
-  border-top-left-radius: 7px 21px;
+  border-top-left-radius: 7px 21px;x
   border-top-right-radius: 7px 21px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -245,7 +245,6 @@ ul ol li:nth-child(2){
   /* position: absolute; */
   width: auto;
 }
-<<<<<<< HEAD
 
 .container {
     display: flex;
@@ -279,7 +278,6 @@ ul ol li:nth-child(2){
     display: flex;
     justify-content: center;
 }
-=======
+
 /* #up:active {margin: 8px 5px -2px;} */
 #down {border-top-left-radius: 0px; border-top-right-radius: 0px;}
->>>>>>> 1a8e75aa2653477711d28b75d7564c51857d2290
