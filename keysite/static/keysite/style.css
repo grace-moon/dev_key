@@ -73,13 +73,15 @@ button{
     color-stop(0.95, rgb(230,233,235)),
     color-stop(1, rgb(191,191,191))
   );
+
   background-image: -moz-linear-gradient(
       center bottom,
       rgb(212,216,219) 27%,
       rgb(213,217,220) 64%,
       rgb(230,233,235) 95%,
-      rgb(191,191,191) 100%
+      rgb(191,191,191) 100%,
   );
+
   border-top-left-radius: 7px 21px;x
   border-top-right-radius: 7px 21px;
   border-bottom-right-radius: 10px;
@@ -91,7 +93,7 @@ button{
     /* 0 4px 0 #bbb, */
     /* 0 10px 0 #ccc; */
 }
-ul::before{ 
+ul::before{
   padding-top: 30%;
 }
 ul {
