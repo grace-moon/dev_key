@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Query the element
     const resizer = document.getElementById('dragMe');
