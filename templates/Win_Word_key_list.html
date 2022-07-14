@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% for cmd_list in cmd_list %}
+    <div>
+        <h5><a href="">{{ cmd_list.cmd_name }}</a></h5>
+        <p>{{ cmd_list.cmd_description |linebreaksbr }}</p>
+    </div>
+{% endfor %}
