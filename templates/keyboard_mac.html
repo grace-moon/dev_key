@@ -4,122 +4,119 @@
     <head>
         <meta charset="utf-8"/>
         <title>HTML DOM - Create resizable split views</title>
-        <meta name="viewport" content="width=device-width, initdial-scale=1"/>
-        <link rel="stylesheet" href="{% static 'keysite/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{% static 'keysite/style2.css' %}">
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap"/>
-        <script src="{% static 'keysite/script.js' %}"></script>
+        <!-- <script src="{% static 'keysite/script.js' %}"></script>  -->
     </head>
     <body>
-        <div class="container">
-            <div class="container__left">
+          <div class="container__left">
                 <div class="keyboard-container">
                     <div id="keyboard">
                         <ul id="fns">
-                            <li><button href="#" class="key c27 fn"><div id="esc">esc</div></button></li>
-                            <li><button href="#" class="key c112 fn"><div>F1</div></button></li>
-                            <li><button href="#" class="key c113 fn"><div>F2</div></button></li>
-                            <li><button href="#" class="key c114 fn"><div>F3</div></button></li>
-                            <li><button href="#" class="key c115 fn"><div>F4</div></button></li>
-                            <li><button href="#" class="key c116 fn"><div>F5</div></button></li>
-                            <li><button href="#" class="key c117 fn"><div>F6</div></button></li>
-                            <li><button href="#" class="key c118 fn"><div>F7</div></button></li>
-                            <li><button href="#" class="key c119 fn"><div>F8</div></button></li>
-                            <li><button href="#" class="key c120 fn"><div>F9</div></button></li>
-                            <li><button href="#" class="key c121 fn"><div>F10</div></button></li>
-                            <li><button href="#" class="key c122 fn"><div>F11</div></button></li>
-                            <li><button href="#" class="key c123 fn"><div>F12</div></button></li>
-                            <li><button href="#" class="key eject fn"></button></li>
+                            <button href="#" class="key c27 fn"></button>
+                            <button href="#" class="key c112 fn"></button>
+                            <button href="#" class="key c113 fn"></button>
+                            <button href="#" class="key c114 fn"></button>
+                            <button href="#" class="key c115 fn"></button>
+                            <button href="#" class="key c116 fn"></button>
+                            <button href="#" class="key c117 fn"></button>
+                            <button href="#" class="key c118 fn"></button>
+                            <button href="#" class="key c119 fn"></button>
+                            <button href="#" class="key c120 fn"></button>
+                            <button href="#" class="key c121 fn"></button>
+                            <button href="#" class="key c122 fn"></button>
+                            <button href="#" class="key c123 fn"></button>
+                            <button href="#" class="key eject fn"></button>
                         </ul>
                         <ul id="numbers">
-                            <li><button href="#" class="key c192"><div>~</div><div>`</div></button></li>
-                            <li><button href="#" class="key c49"><div>!</div><div>1</div></button></li>
-                            <li><button href="#" class="key c50"><div>@</div><div>2</div></button></li>
-                            <li><button href="#" class="key c51"><div>#</div><div>3</div></button></li>
-                            <li><button href="#" class="key c52"><div>$</div><div>4</div></button></li>
-                            <li><button href="#" class="key c53"><div>%</div><div>5</div></button></li>
-                            <li><button href="#" class="key c54"><div>^</div><div>6</div></button></li>
-                            <li><button href="#" class="key c55"><div>&</div><div>7</div></button></li>
-                            <li><button href="#" class="key c56"><div>*</div><div>8</div></button></li>
-                            <li><button href="#" class="key c57"><div>(</div><div>9</div></button></li>
-                            <li><button href="#" class="key c48"><div>)</div><div>0</div></button></li>
-                            <li><button href="#" class="key c189 alt"><div>_</div><div>-</div></button></li>
-                            <li><button href="#" class="key c187"><div>+</div><div>=</div></button></li>
-                            <li><button href="#" class="key c46" id="delete"><div>Delete</div></button></li>
+                            <button href="#" class="key c192"></button>
+                            <button href="#" class="key c49"></button>
+                            <button href="#" class="key c50"></button>
+                            <button href="#" class="key c51"></button>
+                            <button href="#" class="key c52"></button>
+                            <button href="#" class="key c53"></button>
+                            <button href="#" class="key c54"></button>
+                            <button href="#" class="key c55"></button>
+                            <button href="#" class="key c56"></button>
+                            <button href="#" class="key c57"></button>
+                            <button href="#" class="key c48"></button>
+                            <button href="#" class="key c189 alt"></button>
+                            <button href="#" class="key c187"></button>
+                            <button href="#" class="key c46" id="delete"></button>
                         </ul>
                         <ul id="qwerty">
-                            <li><button href="#" class="key c9" id="tab"><div>tab</div></button></li>
-                            <li><button href="#" class="key c81"><div>q</div></button></li>
-                            <li><button href="#" class="key c87"><div>w</div></button></li>
-                            <li><button href="#" class="key c69"><div>e</div></button></li>
-                            <li><button href="#" class="key c82"><div>r</div></button></li>
-                            <li><button href="#" class="key c84"><div>t</div></button></li>
-                            <li><button href="#" class="key c89"><div>y</div></button></li>
-                            <li><button href="#" class="key c85"><div>u</div></button></li>
-                            <li><button href="#" class="key c73"><div>i</div></button></li>
-                            <li><button href="#" class="key c79"><div>o</div></button></li>
-                            <li><button href="#" class="key c80"><div>p</div></button></li>
-                            <li><button href="#" class="key c219 alt"><div>{</div><div>[</div></button></li>
-                            <li><button href="#" class="key c221 alt"><div>}</div><div>]</div></button></li>
-                            <li><button href="#" class="key c220 alt"><div>|</div><div>\</div></button></li>
+                            <button href="#" class="key c9" id="tab"></button>
+                            <button href="#" class="key c81"></button>
+                            <button href="#" class="key c87"></button>
+                            <button href="#" class="key c69"></button>
+                            <button href="#" class="key c82"></button>
+                            <button href="#" class="key c84"></button>
+                            <button href="#" class="key c89"></button>
+                            <button href="#" class="key c85"></button>
+                            <button href="#" class="key c73"></button>
+                            <button href="#" class="key c79"></button>
+                            <button href="#" class="key c80"></button>
+                            <button href="#" class="key c219 alt"></button>
+                            <button href="#" class="key c221 alt"></button>
+                            <button href="#" class="key c220 alt"></button>
                         </ul>
                         <ul id="asdfg">
-                            <li><button href="#" class="key c20 alt" id="caps"><b></b><div>caps lock</div></button></li>
-                            <li><button href="#" class="key c65"><div>a</div></button></li>
-                            <li><button href="#" class="key c83"><div>s</div></button></li>
-                            <li><button href="#" class="key c68"><div>d</div></button></li>
-                            <li><button href="#" class="key c70"><div>f</div></button></li>
-                            <li><button href="#" class="key c71"><div>g</div></button></li>
-                            <li><button href="#" class="key c72"><div>h</div></button></li>
-                            <li><button href="#" class="key c74"><div>j</div></button></li>
-                            <li><button href="#" class="key c75"><div>k</div></button></li>
-                            <li><button href="#" class="key c76"><div>l</div></button></li>
-                            <li><button href="#" class="key c186 alt"><div>:</div><div>;</div></button></li>
-                            <li><button href="#" class="key c222 alt"><div>"</div><div>'</div></button></li>
-                            <li><button href="#" class="key c13 alt" id="enter"><div>return</div></button></li>
+                            <button href="#" class="key c20 alt" id="caps"></button>
+                            <button href="#" class="key c65"></button>
+                            <button href="#" class="key c83"></button>
+                            <button href="#" class="key c68"></button>
+                            <button href="#" class="key c70"></button>
+                            <button href="#" class="key c71"></button>
+                            <button href="#" class="key c72"></button>
+                            <button href="#" class="key c74"></button>
+                            <button href="#" class="key c75"></button>
+                            <button href="#" class="key c76"></button>
+                            <button href="#" class="key c186 alt"></button>
+                            <button href="#" class="key c222 alt"></button>
+                            <button href="#" class="key c13 alt" id="enter"></button>
                         </ul>
                         <ul id="zxcvb">
-                            <li class="shift-container"><button href="#" class="key c16 shiftleft"><div>Shift</div></button></li>
-                            <li><button href="#" class="key c90"><div>z</div></button></li>
-                            <li><button href="#" class="key c88"><div>x</div></button></li>
-                            <li><button href="#" class="key c67"><div>c</div></button></li>
-                            <li><button href="#" class="key c86"><div>v</div></button></li>
-                            <li><button href="#" class="key c66"><div>b</div></button></li>
-                            <li><button href="#" class="key c78"><div>n</div></button></li>
-                            <li><button href="#" class="key c77"><div>m</div></button></li>
-                            <li><button href="#" class="key c188 alt"><div>&lt;</div><div>,</div></button></li>
-                            <li><button href="#" class="key c190 alt"><div>&gt;</div><div>.</div></button></li>
-                            <li><button href="#" class="key c191 alt"><div>?</div><div>/</div></button></li>
-                            <li class="shift-container"><button href="#" class="key c16 shiftright"><div>Shift</div></button></li>
+                            <button href="#" class="key c16 shiftleft"></button>
+                            <button href="#" class="key c90"></button>
+                            <button href="#" class="key c88"></button>
+                            <button href="#" class="key c67"></button>
+                            <button href="#" class="key c86"></button>
+                            <button href="#" class="key c66"></button>
+                            <button href="#" class="key c78"></button>
+                            <button href="#" class="key c77"></button>
+                            <button href="#" class="key c188 alt"></button>
+                            <button href="#" class="key c190 alt"></button>
+                            <button href="#" class="key c191 alt"></button>
+                            <button href="#" class="key c16 shiftright"></button>
                         </ul>
                         <ul id="bottomrow">
-                            <li><button href="#" class="key" id="fn"><div>fn</div></button></li>
-                            <li><button href="#" class="key c17" id="control"><div>control</div></button></li>
-                            <li><button href="#" class="key option" id="optionleft"><div>option</div></button></li>
-                            <li><button href="#" class="key command" id="commandleft"><div>command</div></button></li>
-                            <li class="spacebar-container"><button href="#" class="key c32" id="spacebar"><div></div></button></li>
-                            <li><button href="#" class="key command" id="commandright"><div>command</div></button></li>
-                            <li><button href="#" class="key option" id="optionright"><div>option</div></button></li>
-                            <li>
-                              <ol>
-                                <li>
-                                  <button href="#" class="key none"></button>
-                                  <button href="#" class="key c38" id="up"><div>&#x25B2;</div></button>
-                                  <button href="#" class="key none"></button>
-                                </li>
-                                <li>
-                                  <button href="#" class="key c37" id="left"><div>&#x25C0;</div></button>
-                                  <button href="#" class="key c40" id="down"><div>&#x25BC;</div></button>
-                                  <button href="#" class="key c39" id="right"><div>&#x25B6;</div></button>
-                                </li>
-                              </ol>
-                            </li>
+                            <button href="#" class="key" id="fn"></button>
+                            <button href="#" class="key c17" id="control"></button>
+                            <button href="#" class="key option" id="optionleft"></button>
+                            <button href="#" class="key command" id="commandleft"></button>
+                            <button href="#" class="key c32" id="spacebar">
+                            <button href="#" class="key command" id="commandright"></button>
+                            <button href="#" class="key option" id="optionright"></button>
+                            <div class="direct-container">
+                              <div class="direct-key-container">
+                                <button href="#" class="key none"></button>
+                                <button href="#" class="key c37" id="left"></button>
+                              </div>
+                              <div class="direct-key-container" >
+                                <button href="#" class="key c38" id="up"></button>
+                                <button href="#" class="key c40" id="down"></button>
+                              </div>
+                              <div class="direct-key-container">
+                                <button href="#" class="key none"></button>
+                                <button href="#" class="key c39" id="right"></button>
+                              </div>
+                            </div>
+
                         </ul>
                     </div>
-                  </div>
                 </div>
-                <div class="resizer" id="dragMe" style="width: 10px"></div>
-                <div class="container__right">Right</div>
-        </div>
+            </div>
     </body>
 </html>
