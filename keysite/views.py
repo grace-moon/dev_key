@@ -21,3 +21,6 @@ def MacOS_Word_key_list(request):
     return render(request, '../templates/MacOS_Word_key_list.html',{'cmd_list':cmd_list})
 
 
+def home2(request):
+    return render(request, '../templates/home2.html')
+

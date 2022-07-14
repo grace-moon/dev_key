@@ -7,4 +7,5 @@ urlpatterns = [
     path('MacOS_HWP_key_list/', views.MacOS_HWP_key_list, name='MacOS_HWP_keylist'),
     path('MacOS_Word_key_list/', views.MacOS_Word_key_list, name='MacOS_Word_keylist'),
     path('',views.home, name='home'),
+    path('home2/',views.home2, name='home2'),
 ]
