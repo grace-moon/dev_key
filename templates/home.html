@@ -17,7 +17,6 @@
             background-color: white;
             padding: 10%;
         }
-
     </style>
 <body>
         <div class="logo">
@@ -26,9 +25,8 @@
             </div>
         </div>
 
-        <div style="text-align: center;">
-
-            <div class="" style="width:18rem; height: 20%;  display: inline-block; "  >
+        <div class="link-container" style="text-align: center;">
+            <div class="mac-link-container" style="width:18rem; height: 20%;  display: inline-block; "  >
               <div>
                 <h4 >MacOS</h4>
                 <a href="{% url 'MacOS_Word_keylist' %}"><img width="40px" src="{% static 'image/word.png' %}"></a>
@@ -36,7 +34,7 @@
               </div>
             </div>
 
-            <div class="" style="width:18rem; height: 20%;  display: inline-block; "  >
+            <div class="win-link-container" style="width:18rem; height: 20%;  display: inline-block; "  >
               <div>
                 <h4 >Windows</h4>
                 <a href="{% url 'Win_Word_keylist' %}"><img width="40px" src="{% static 'image/word.png' %}"></a>

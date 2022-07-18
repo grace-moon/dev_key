@@ -11,7 +11,7 @@
         <!-- <script src="{% static 'keysite/script.js' %}"></script>  -->
     </head>
     <body>
-          <div class="container__left">
+          <div class="container">
                 <div class="keyboard-container">
                     <div id="keyboard">
                         <ul id="fns">
@@ -28,7 +28,6 @@
                             <button href="#" class="key c121 fn"></button>
                             <button href="#" class="key c122 fn"></button>
                             <button href="#" class="key c123 fn"></button>
-                            <button href="#" class="key eject fn"></button>
                         </ul>
                         <ul id="numbers">
                             <button href="#" class="key c192"></button>
@@ -78,7 +77,7 @@
                             <button href="#" class="key c13 alt" id="enter"></button>
                         </ul>
                         <ul id="zxcvb">
-                            <button href="#" class="key c16 shiftleft"></button>
+                            <button href="#" class="key c16" id="shiftleft"></button>
                             <button href="#" class="key c90"></button>
                             <button href="#" class="key c88"></button>
                             <button href="#" class="key c67"></button>
@@ -89,16 +88,16 @@
                             <button href="#" class="key c188 alt"></button>
                             <button href="#" class="key c190 alt"></button>
                             <button href="#" class="key c191 alt"></button>
-                            <button href="#" class="key c16 shiftright"></button>
+                            <button href="#" class="key c16" id="shiftright"></button>
                         </ul>
                         <ul id="bottomrow">
-                            <button href="#" class="key" id="fn"></button>
-                            <button href="#" class="key c17" id="control"></button>
-                            <button href="#" class="key option" id="optionleft"></button>
-                            <button href="#" class="key command" id="commandleft"></button>
+                            <button href="#" class="key c17" id="w_control_left"></button>
+                            <button href="#" class="key command" id="window_key"></button>
+                            <button href="#" class="key option" id="alt_left"></button>
                             <button href="#" class="key c32" id="spacebar">
-                            <button href="#" class="key command" id="commandright"></button>
-                            <button href="#" class="key option" id="optionright"></button>
+                            <button href="#" class="key option" id="alt_right"></button>
+                            <button href="#" class="key option" id="menu_key"></button>
+                            <button href="#" class="key c17" id="w_control_right"></button>
                             <div class="direct-container">
                               <div class="direct-key-container">
                                 <button href="#" class="key none"></button>
