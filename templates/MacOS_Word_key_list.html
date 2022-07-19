@@ -22,7 +22,7 @@
                 <div class="app"></div>
                 <div class="breadcrumb">
                     <a href="{% url 'home' %}"><i class="fas fa-home"></i></a>
-                    <a href="#"><i class="fab fa-windows"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
                     <a href="#"><img width="18px" src="{% static 'image/word.png' %}"></a>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                     <div class="searchbar-container">
                         <div class="searchbar">
                             <div class="search-icon"><i class="fas fa-caret-down"></i></div>
-                            <form class="search-content" method="POST" action="">
+                            <form class="search-content" method="POST" action="{% url 'Search' %}">
                                 {% csrf_token %}
                                 <input class="search-input" type="search" placeholder="Search" name="searched" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>

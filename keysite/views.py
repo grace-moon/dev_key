@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Cmd
+from django.db.models import Q
 
 def home(request):
     return render(request, '../templates/home.html')
@@ -24,11 +25,11 @@ def Search(request):
     if request.method == 'POST':
         searched = request.POST['searched']
         searched_list = Cmd.objects.filter(
-            choice_OS__icontains=searched,
-            program__icontains=searched,
-            cmd_category__icontains=searched,
-            cmd_name__icontains=searched,
-            cmd_description__icontains=searched,
+            Q(choice_OS__icontains=searched)|
+            Q(program__icontains=searched)|
+            Q(cmd_category__icontains=searched)|
+            Q(cmd_name__icontains=searched)|
+            Q(cmd_description__icontains=searched)
         )
         return render(request, 'Search_list.html', {'searched': searched, 'searched_list': searched_list})
     else:

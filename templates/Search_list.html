@@ -20,35 +20,15 @@
     </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"> Navbar </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"> Home </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> Link </a></li>
-                </ul>
-                <form class="d-flex" method="POST" action="{% url 'Search' %}">
-                {% csrf_token %}
-                <input class="form-control me-2" type="search" placeholder="Search" name="searched" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"> Search </button>
-            </form>
-            </div>
-        </div>
-    </nav>
-
         {% if searched %}
                 <h1> 검색하신 {{ searched }}에 대한 결과입니다. </h1>
                 <br>
-                {% for searched_list in searched_list %}        # 검색 결과가 여러 개일 수 있기 때문에 반복문을 사용했습니다.
-                        {{ searched_list.choice_OS }} <br>
-                        {{ searched_list.program }} <br>
-                        {{ searched_list.cmd_category }} <br>
-                        {{ searched_list.cmd_name }} <br>
-                        {{ searched_list.cmd_description }} <br>
+                {% for search in searched_list %}
+                    {{ search.choice_OS }} <br>
+                    {{ search.program }} <br>
+                    {{ search.cmd_category }} <br>
+                    {{ search.cmd_name }} <br>
+                    {{ search.cmd_description }} <br>
                 {% endfor %}
         {% else %}
                 <h1> 검색어를 입력해주세요. </h1>

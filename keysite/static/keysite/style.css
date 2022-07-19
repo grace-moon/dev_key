@@ -33,8 +33,27 @@ a {
   color: black;
   display : inline-block;
 }
-
-
+.link-container {
+  margin: 0 auto;
+}
+.mac-container{
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  color: #332f2f;
+  box-shadow: 5px 5px 15px -1px #332f2f25;
+  transition-property: transform; /*container의 height 변화 X*/
+  transition-duration: 0.3s;
+}
+.mac-container:hover .mac-link-container{
+  margin: 0.5rem 0px;
+  opacity: 1;
+  height: 10px;
+  transition-property: height, opacity; /*height를 0으로 했다가 hover시 수치를 적용하는 방식으로 숨겼다가 보이게 하기*/
+  transition-duration: 0.3s;
+}
 /*============body-bg============*/
 
 
@@ -101,6 +120,9 @@ header {
 }
 .breadcrumb a {
   cursor: pointer;
+}
+.fa-apple { 
+  font-size: 1.2rem;
 }
 .breadcrumb a::before {
   content: "/\00a0";
