@@ -11,7 +11,6 @@
         <script src="https://kit.fontawesome.com/413c7f2129.js" crossorigin="anonymous"></script>
         <!-- <script src="{% static 'keysite/script.js' %}"></script>  -->
     </head>
-    <body>
         <body class="hangeul">
             <header>
                 <div class="head-container">
@@ -20,10 +19,14 @@
             </header>
             <div class="title">
                 <div class="app-container">
-                    Win_HWP_keylist
+                    <div class="app"></div>
+                    <div class="breadcrumb">
+                        <p><a href="{% url 'home' %}"><i class="fas fa-home"></i></a></p>
+                        <p><a href="#"><i class="fab fa-windows"></i></a></p>
+                        <p><a href="#"><i class="fas fa-file-word"></i></a></p>
+                    </div>
                 </div>
             </div>
-            
             <section class="content">
                 <div class="container-left">
                     <div class="keyboard-container">
@@ -137,11 +140,14 @@
                     <div class="hotkey-container">
                         <div class="searchbar-container">
                             <div class="searchbar">
-                                <div class="search-icon"><i class="fas fa-search"></i><i class="fas fa-caret-down"></i></div>
-                                <input class="search-input" type="text">
+                                <div class="search-icon"><i class="fas fa-caret-down"></i></div>
+                                <form class="search-content" method="POST" action="">
+                                    {% csrf_token %}
+                                    <input class="search-input" type="search" placeholder="Search" name="searched" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                                </form>
                             </div>
                         </div>
-
                         <div class="hotkey-contents">
                             {% for cmd_list in cmd_list %}
                             <div class="hotkey-item">
