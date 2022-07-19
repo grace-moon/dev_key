@@ -1,6 +1,17 @@
 /*home.html*/
-a{
-  text-decoration : none;
+* {
+  box-sizing: border-box;
+}
+body {
+  /* font-family : 'Noto Sans KR', 'sans-serif'; */
+  margin: 0 auto;
+}
+h1,h2{
+  /* font-family: 'NanumSquare', 'sans-serif'; */
+  /* font: inherit; */
+}
+a {
+  all: unset;
 }
 .logo{
   width: 100%;
@@ -40,7 +51,7 @@ header {
   z-index: 1000;
 }
 
-.head-container { 
+.head-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -55,24 +66,81 @@ header {
 
 .title { 
   height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-container {
+  color: #fff;
 }
 
 
 /*============hotkey============*/
 .hotkey-container { 
   margin:1% 0 0 5%;
+}
+.searchbar-container { 
+  height: 40px;
+  background-color:ghostwhite;
   border-radius: 5px;
+  margin: 0 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+      inset 0 0 25px #e8e8e8,
+      0 3px 0 #c3c3c3,
+      0 3px 0 #c9c9c9,
+      0 6px 4px #333;
+}
+.searchbar { 
+  border: 2px solid #000;
+  border-radius: 5px;
+  height: 30px;
+  width: 98%;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  display: flex;
+  padding: 0 5px;
+}
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background-color: rgba(0,0,0,0);
+}
+.hotkey-contents { 
+  /* margin:1% 0 0 5%; */
   padding: 10px;
+  border-radius: 5px;
   background-color:ghostwhite;
   box-shadow: 
       inset 0 0 25px #e8e8e8,
       0 3px 0 #c3c3c3,
-      0 5px 0 #c9c9c9,
+      0 3px 0 #c9c9c9,
       0 6px 4px #333;
-  min-height: 356.25px;
+  max-height: 316.25px;
+  overflow:auto
 }
-
-
+.hotkey-item { 
+  margin: 5px 0;
+  border-bottom: #bbb 1px solid;
+  display: flex;
+  padding: 5px 0;
+}
+.hotkey-title { 
+  width: 30%;
+  font-size: 1rem;
+  padding-right: 3px;
+}
+.hotkey-desc {
+  padding-left: 3px;
+  /* border-left: 1px solid #bbb; */
+  width: 70%;
+}
 
 
 /*style only keyboard (edited by. LK)*/

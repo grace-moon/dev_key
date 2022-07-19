@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{% static 'keysite/style.css' %}">
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap"/>
+        <script src="https://kit.fontawesome.com/413c7f2129.js" crossorigin="anonymous"></script>
         <!-- <script src="{% static 'keysite/script.js' %}"></script>  -->
     </head>
     <body>
@@ -18,7 +19,9 @@
                 </div>
             </header>
             <div class="title">
-                <div class="app-container"></div>
+                <div class="app-container">
+                    Win_HWP_keylist
+                </div>
             </div>
             
             <section class="content">
@@ -132,12 +135,20 @@
                 </div>
                 <div class="container-right">
                     <div class="hotkey-container">
-                        {% for cmd_list in cmd_list %}
-                        <div>
-                            <h5><a href="">{{ cmd_list.cmd_name }}</a></h5>
-                            <p>{{ cmd_list.cmd_description |linebreaksbr }}</p>
+                        <div class="searchbar-container">
+                            <div class="searchbar">
+                                <div class="search-icon"><i class="fas fa-search"></i><i class="fas fa-caret-down"></i></div>
+                                <input class="search-input" type="text">
+                            </div>
                         </div>
-                        {% endfor %}
+                        <div class="hotkey-contents">
+                            {% for cmd_list in cmd_list %}
+                            <div class="hotkey-item">
+                                <h5 class="hotkey-title"><a href="">{{ cmd_list.cmd_name }}</a></h5>
+                                <p class="hotkey-desc">{{ cmd_list.cmd_description |linebreaksbr }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </section>
