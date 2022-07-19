@@ -11,7 +11,7 @@
         <script src="https://kit.fontawesome.com/413c7f2129.js" crossorigin="anonymous"></script>
         <!-- <script src="{% static 'keysite/script.js' %}"></script>  -->
     </head>
-        <body class="hangeul">
+        <body>
             <header>
                 <div class="head-container">
                     <div class="head-title"> <a href="{% url 'home' %}"><h1>KEYHUB</h1></a></div>
@@ -21,9 +21,9 @@
                 <div class="app-container">
                     <div class="app"></div>
                     <div class="breadcrumb">
-                        <p><a href="{% url 'home' %}"><i class="fas fa-home"></i></a></p>
-                        <p><a href="#"><i class="fab fa-windows"></i></a></p>
-                        <p><a href="#"><i class="fas fa-file-word"></i></a></p>
+                        <a href="{% url 'home' %}"><i class="fas fa-home"></i></a>
+                        <a href="#"><i class="fab fa-windows"></i></a>
+                        <a href="#"><img width="18px" src="{% static 'image/word.png' %}"></a>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                         <div class="searchbar-container">
                             <div class="searchbar">
                                 <div class="search-icon"><i class="fas fa-caret-down"></i></div>
-                                <form class="search-content" method="POST" action="">
+                                <form class="search-content" method="POST" action="{% url 'Search' %}">
                                     {% csrf_token %}
                                     <input class="search-input" type="search" placeholder="Search" name="searched" aria-label="Search">
                                     <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>

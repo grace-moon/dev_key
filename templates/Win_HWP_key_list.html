@@ -8,137 +8,156 @@
         <link rel="stylesheet" href="{% static 'keysite/style.css' %}">
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap"/>
+        <script src="https://kit.fontawesome.com/413c7f2129.js" crossorigin="anonymous"></script>
         <!-- <script src="{% static 'keysite/script.js' %}"></script>  -->
     </head>
-    <body class="hangeul">
-        <header>
-            <div class="head-container">
-                <div class="head-title"> <a href="{% url 'home' %}"><h1>KEYHUB</h1></a></div>
+        <body>
+            <header>
+                <div class="head-container">
+                    <div class="head-title"> <a href="{% url 'home' %}"><h1>KEYHUB</h1></a></div>
+                </div>
+            </header>
+            <div class="title">
+                <div class="app-container">
+                    <div class="app"></div>
+                    <div class="breadcrumb">
+                        <a href="{% url 'home' %}"><i class="fas fa-home"></i></a>
+                        <a href="#"><i class="fab fa-windows"></i></a>
+                        <a href="#"><img width="16px" src="{% static 'image/hwp.png' %}"></a>
+                    </div>
+                </div>
             </div>
-        </header>
-        <div class="title">
-            <div class="app-container"></div>
-        </div>
-        
-        <section class="content">
-            <div class="container-left">
-                <div class="keyboard-container">
-                    <div class="keyboard-inner">
-                        <div id="keyboard">
-                            <ul id="fns">
-                                <button href="#" class="key c27 fn"></button>
-                                <button href="#" class="key c112 fn"></button>
-                                <button href="#" class="key c113 fn"></button>
-                                <button href="#" class="key c114 fn"></button>
-                                <button href="#" class="key c115 fn"></button>
-                                <button href="#" class="key c116 fn"></button>
-                                <button href="#" class="key c117 fn"></button>
-                                <button href="#" class="key c118 fn"></button>
-                                <button href="#" class="key c119 fn"></button>
-                                <button href="#" class="key c120 fn"></button>
-                                <button href="#" class="key c121 fn"></button>
-                                <button href="#" class="key c122 fn"></button>
-                                <button href="#" class="key c123 fn"></button>
-                            </ul>
-                            <ul id="numbers">
-                                <button href="#" class="key c192"></button>
-                                <button href="#" class="key c49"></button>
-                                <button href="#" class="key c50"></button>
-                                <button href="#" class="key c51"></button>
-                                <button href="#" class="key c52"></button>
-                                <button href="#" class="key c53"></button>
-                                <button href="#" class="key c54"></button>
-                                <button href="#" class="key c55"></button>
-                                <button href="#" class="key c56"></button>
-                                <button href="#" class="key c57"></button>
-                                <button href="#" class="key c48"></button>
-                                <button href="#" class="key c189 alt"></button>
-                                <button href="#" class="key c187"></button>
-                                <button href="#" class="key c46" id="delete"></button>
-                            </ul>
-                            <ul id="qwerty">
-                                <button href="#" class="key c9" id="tab"></button>
-                                <button href="#" class="key c81"></button>
-                                <button href="#" class="key c87"></button>
-                                <button href="#" class="key c69"></button>
-                                <button href="#" class="key c82"></button>
-                                <button href="#" class="key c84"></button>
-                                <button href="#" class="key c89"></button>
-                                <button href="#" class="key c85"></button>
-                                <button href="#" class="key c73"></button>
-                                <button href="#" class="key c79"></button>
-                                <button href="#" class="key c80"></button>
-                                <button href="#" class="key c219 alt"></button>
-                                <button href="#" class="key c221 alt"></button>
-                                <button href="#" class="key c220 alt"></button>
-                            </ul>
-                            <ul id="asdfg">
-                                <button href="#" class="key c20 alt" id="caps"></button>
-                                <button href="#" class="key c65"></button>
-                                <button href="#" class="key c83"></button>
-                                <button href="#" class="key c68"></button>
-                                <button href="#" class="key c70"></button>
-                                <button href="#" class="key c71"></button>
-                                <button href="#" class="key c72"></button>
-                                <button href="#" class="key c74"></button>
-                                <button href="#" class="key c75"></button>
-                                <button href="#" class="key c76"></button>
-                                <button href="#" class="key c186 alt"></button>
-                                <button href="#" class="key c222 alt"></button>
-                                <button href="#" class="key c13 alt" id="enter"></button>
-                            </ul>
-                            <ul id="zxcvb">
-                                <button href="#" class="key c16" id="shiftleft"></button>
-                                <button href="#" class="key c90"></button>
-                                <button href="#" class="key c88"></button>
-                                <button href="#" class="key c67"></button>
-                                <button href="#" class="key c86"></button>
-                                <button href="#" class="key c66"></button>
-                                <button href="#" class="key c78"></button>
-                                <button href="#" class="key c77"></button>
-                                <button href="#" class="key c188 alt"></button>
-                                <button href="#" class="key c190 alt"></button>
-                                <button href="#" class="key c191 alt"></button>
-                                <button href="#" class="key c16" id="shiftright"></button>
-                            </ul>
-                            <ul id="bottomrow">
-                                <button href="#" class="key c17" id="w_control_left"></button>
-                                <button href="#" class="key command" id="window_key"></button>
-                                <button href="#" class="key option" id="alt_left"></button>
-                                <button href="#" class="key c32" id="spacebar">
-                                    <button href="#" class="key option" id="alt_right"></button>
-                                    <button href="#" class="key option" id="menu_key"></button>
-                                    <button href="#" class="key c17" id="w_control_right"></button>
-                                    <div class="direct-container">
-                                        <div class="direct-key-container">
-                                            <button href="#" class="key none"></button>
-                                            <button href="#" class="key c37" id="left"></button>
+            <section class="content">
+                <div class="container-left">
+                    <div class="keyboard-container">
+                        <div class="keyboard-inner">
+                            <div id="keyboard">
+                                <ul id="fns">
+                                    <button href="#" class="key c27 fn"></button>
+                                    <button href="#" class="key c112 fn"></button>
+                                    <button href="#" class="key c113 fn"></button>
+                                    <button href="#" class="key c114 fn"></button>
+                                    <button href="#" class="key c115 fn"></button>
+                                    <button href="#" class="key c116 fn"></button>
+                                    <button href="#" class="key c117 fn"></button>
+                                    <button href="#" class="key c118 fn"></button>
+                                    <button href="#" class="key c119 fn"></button>
+                                    <button href="#" class="key c120 fn"></button>
+                                    <button href="#" class="key c121 fn"></button>
+                                    <button href="#" class="key c122 fn"></button>
+                                    <button href="#" class="key c123 fn"></button>
+                                </ul>
+                                <ul id="numbers">
+                                    <button href="#" class="key c192"></button>
+                                    <button href="#" class="key c49"></button>
+                                    <button href="#" class="key c50"></button>
+                                    <button href="#" class="key c51"></button>
+                                    <button href="#" class="key c52"></button>
+                                    <button href="#" class="key c53"></button>
+                                    <button href="#" class="key c54"></button>
+                                    <button href="#" class="key c55"></button>
+                                    <button href="#" class="key c56"></button>
+                                    <button href="#" class="key c57"></button>
+                                    <button href="#" class="key c48"></button>
+                                    <button href="#" class="key c189 alt"></button>
+                                    <button href="#" class="key c187"></button>
+                                    <button href="#" class="key c46" id="delete"></button>
+                                </ul>
+                                <ul id="qwerty">
+                                    <button href="#" class="key c9" id="tab"></button>
+                                    <button href="#" class="key c81"></button>
+                                    <button href="#" class="key c87"></button>
+                                    <button href="#" class="key c69"></button>
+                                    <button href="#" class="key c82"></button>
+                                    <button href="#" class="key c84"></button>
+                                    <button href="#" class="key c89"></button>
+                                    <button href="#" class="key c85"></button>
+                                    <button href="#" class="key c73"></button>
+                                    <button href="#" class="key c79"></button>
+                                    <button href="#" class="key c80"></button>
+                                    <button href="#" class="key c219 alt"></button>
+                                    <button href="#" class="key c221 alt"></button>
+                                    <button href="#" class="key c220 alt"></button>
+                                </ul>
+                                <ul id="asdfg">
+                                    <button href="#" class="key c20 alt" id="caps"></button>
+                                    <button href="#" class="key c65"></button>
+                                    <button href="#" class="key c83"></button>
+                                    <button href="#" class="key c68"></button>
+                                    <button href="#" class="key c70"></button>
+                                    <button href="#" class="key c71"></button>
+                                    <button href="#" class="key c72"></button>
+                                    <button href="#" class="key c74"></button>
+                                    <button href="#" class="key c75"></button>
+                                    <button href="#" class="key c76"></button>
+                                    <button href="#" class="key c186 alt"></button>
+                                    <button href="#" class="key c222 alt"></button>
+                                    <button href="#" class="key c13 alt" id="enter"></button>
+                                </ul>
+                                <ul id="zxcvb">
+                                    <button href="#" class="key c16" id="shiftleft"></button>
+                                    <button href="#" class="key c90"></button>
+                                    <button href="#" class="key c88"></button>
+                                    <button href="#" class="key c67"></button>
+                                    <button href="#" class="key c86"></button>
+                                    <button href="#" class="key c66"></button>
+                                    <button href="#" class="key c78"></button>
+                                    <button href="#" class="key c77"></button>
+                                    <button href="#" class="key c188 alt"></button>
+                                    <button href="#" class="key c190 alt"></button>
+                                    <button href="#" class="key c191 alt"></button>
+                                    <button href="#" class="key c16" id="shiftright"></button>
+                                </ul>
+                                <ul id="bottomrow">
+                                    <button href="#" class="key c17" id="w_control_left"></button>
+                                    <button href="#" class="key command" id="window_key"></button>
+                                    <button href="#" class="key option" id="alt_left"></button>
+                                    <button href="#" class="key c32" id="spacebar">
+                                        <button href="#" class="key option" id="alt_right"></button>
+                                        <button href="#" class="key option" id="menu_key"></button>
+                                        <button href="#" class="key c17" id="w_control_right"></button>
+                                        <div class="direct-container">
+                                            <div class="direct-key-container">
+                                                <button href="#" class="key none"></button>
+                                                <button href="#" class="key c37" id="left"></button>
+                                            </div>
+                                            <div class="direct-key-container" >
+                                                <button href="#" class="key c38" id="up"></button>
+                                                <button href="#" class="key c40" id="down"></button>
+                                            </div>
+                                            <div class="direct-key-container">
+                                                <button href="#" class="key none"></button>
+                                                <button href="#" class="key c39" id="right"></button>
+                                            </div>
                                         </div>
-                                        <div class="direct-key-container" >
-                                            <button href="#" class="key c38" id="up"></button>
-                                            <button href="#" class="key c40" id="down"></button>
-                                        </div>
-                                        <div class="direct-key-container">
-                                            <button href="#" class="key none"></button>
-                                            <button href="#" class="key c39" id="right"></button>
-                                        </div>
-                                    </div>
-                                    
-                            </ul>
+                                        
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container-right">
-                <div class="hotkey-container">
-                    {% for cmd_list in cmd_list %}
-                    <div>
-                        <h5><a href="">{{ cmd_list.cmd_name }}</a></h5>
-                        <p>{{ cmd_list.cmd_description |linebreaksbr }}</p>
+                <div class="container-right">
+                    <div class="hotkey-container">
+                        <div class="searchbar-container">
+                            <div class="searchbar">
+                                <div class="search-icon"><i class="fas fa-caret-down"></i></div>
+                                <form class="search-content" method="POST" action="{% url 'Search' %}">
+                                    {% csrf_token %}
+                                    <input class="search-input" type="search" placeholder="Search" name="searched" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="hotkey-contents">
+                            {% for cmd_list in cmd_list %}
+                            <div class="hotkey-item">
+                                <h5 class="hotkey-title"><a href="">{{ cmd_list.cmd_name }}</a></h5>
+                                <p class="hotkey-desc">{{ cmd_list.cmd_description |linebreaksbr }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
-                    {% endfor %}
                 </div>
-            </div>
-        </section>
-    </body>
+            </section>
+        </body>
 </html>
