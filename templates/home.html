@@ -18,33 +18,27 @@
             padding: 10%;
         }
     </style>
-<body>
-        <div class="logo">
-            <div class="logo">
-                <h1 class="logo" style="height: 100px; margin-left: auto; margin-right: auto; margin-bottom: auto; width: 200px; "><a href="" class="logo"><b>KEYHUB</b></a></h1>
-            </div>
+    <body>
+      <section class="home-body-container">
+        <div class="logo-container">
+          <a href="{% url 'home' %}"><h1 class="logo">KEYHUB</h1></a>
         </div>
-        <div class="link-container" style="text-align: center;">
-            <div class="mac-container" style="width:18rem; height: 20%;  display: inline-block; "  >
-              <div>
-                <h4 >MacOS</h4>
-                <div class="mac-link-container">
-                  <a href="{% url 'MacOS_Word_keylist' %}"><img width="40px" src="{% static 'image/word.png' %}"></a>
-                  <a href="{% url 'MacOS_HWP_keylist' %}"><img width="40px" src="{% static 'image/hwp.png' %}"></a>
-                </div>
+        <div class="link-container">
+            <div class="mac-link-container">
+              <h4>MaxOS</h4>
+              <div class="mac-link home-link-container">
+                <a href="{% url 'Win_Word_keylist' %}"><img width="50px" src="{% static 'image/word.png' %}"></a>
+                <a href="{% url 'Win_HWP_keylist' %}"><img width="50px" src="{% static 'image/hwp.png' %}"></a>
               </div>
             </div>
-
-            <div class="win-container" style="width:18rem; height: 20%;  display: inline-block; "  >
-              <div>
-                <h4 >Windows</h4>
-                <a href="{% url 'Win_Word_keylist' %}"><img width="40px" src="{% static 'image/word.png' %}"></a>
-                <a href="{% url 'Win_HWP_keylist' %}"><img width="40px" src="{% static 'image/hwp.png' %}"></a>
+            <div class="win-link-container">
+              <h4>Windows</h4>
+              <div class="win-link home-link-container">
+                <a href="{% url 'Win_Word_keylist' %}"><img width="50px" src="{% static 'image/word.png' %}"></a>
+                <a href="{% url 'Win_HWP_keylist' %}"><img width="50px" src="{% static 'image/hwp.png' %}"></a>
               </div>
             </div>
         </div>
-
-
-
-</body>
+      </section>
+    </body>
 </html>
