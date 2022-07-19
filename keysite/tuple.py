@@ -31,4 +31,3 @@ category_item =(
     ('Outline', 'Outline'),
     ('Fn_key', 'Fn_key'),
 )
-

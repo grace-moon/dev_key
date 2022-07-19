@@ -20,4 +20,10 @@ def MacOS_Word_key_list(request):
     cmd_list = Cmd.objects.filter(choice_OS='MacOS', program='Word')
     return render(request, '../templates/MacOS_Word_key_list.html',{'cmd_list':cmd_list})
 
-
+def search(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        searched_list = Cmd.objects.filter(name__contains=searched)
+        return render(request, 'searched.html', {'searched': searched, 'recipes': recipes})
+    else:
+        return render(request, 'searched.html', {})
