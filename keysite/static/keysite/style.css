@@ -12,48 +12,101 @@ body {
       rgba(189,189,189,1) 85%);
   margin: 0 auto;
 }
-h1,h2{
-  /* font-family: 'NanumSquare', 'sans-serif'; */
-  /* font: inherit; */
+h1,h2,h4{
+  margin: 0;
 }
 a {
   all: unset;
   cursor: pointer;
 }
-.logo{
-  width: 100%;
-  color: black;
-  width: 100%;
+.logo>a{
+  all:unset;
+  cursor: pointer;
+}
+.home-body-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.logo-container { 
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.choice_program{
-  width: 30%;
-  color: black;
-  display : inline-block;
+.logo{
+  font-size: 10rem;
+  color: white;
+  text-shadow: 
+      0 3px 0 #c3c3c3,
+      0 3px 0 #c9c9c9,
+      0 6px 25px #333;
 }
 .link-container {
+  width: 80%;
   margin: 0 auto;
-}
-.mac-container{
-  width: 100%;
-  background: #fff;
-  border-radius: 9px;
   display: flex;
-  align-items: center;
-  color: #332f2f;
-  box-shadow: 5px 5px 15px -1px #332f2f25;
-  transition-property: transform; /*container의 height 변화 X*/
-  transition-duration: 0.3s;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-.mac-container:hover .mac-link-container{
-  margin: 0.5rem 0px;
+.link-container>div {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding: 2% 0;
+  border-radius: 5px;
+  background: rgba(0,0,0,0);
+  transition: background 0.3s, height 0.3s;
+}
+.home-body-container:hover .link-container{ 
   opacity: 1;
-  height: 10px;
-  transition-property: height, opacity; /*height를 0으로 했다가 hover시 수치를 적용하는 방식으로 숨겼다가 보이게 하기*/
-  transition-duration: 0.3s;
+  transition: opacity 0.3s;
 }
+.home-link-container {
+  display: flex;
+  justify-content: space-around;
+  height: 0px;
+  opacity: 0;
+  margin-top: 20px;
+  transition: height 0.3s, opacity 0.15s;
+}
+.home-link-container img{
+  filter: grayscale(100%);
+}
+.mac-link-container:hover {
+  background: ghostwhite;
+  box-shadow: 
+      inset 0 0 25px #e8e8e8,
+      0 3px 0 #c3c3c3,
+      0 3px 0 #c9c9c9,
+      0 6px 4px #333;
+  height: 120px;
+}
+.win-link-container:hover {
+  background: ghostwhite;
+  box-shadow: 
+      inset 0 0 25px #e8e8e8,
+      0 3px 0 #c3c3c3,
+      0 3px 0 #c9c9c9,
+      0 6px 4px #333;
+  height: 120px;
+}
+.mac-link-container:hover .mac-link{ 
+  opacity: 1;
+  height: 40px;
+  transition-property: height, opacity;
+  transition-duration: 0.3s, 0.7s;
+}
+.win-link-container:hover .win-link{ 
+  opacity: 1;
+  height: 40px;
+  transition-property: height, opacity;
+  transition-duration: 0.3s, 0.7s;
+}
+
 /*============body-bg============*/
 
 
